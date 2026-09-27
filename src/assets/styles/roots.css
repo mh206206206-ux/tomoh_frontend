@@ -1,0 +1,30 @@
+/* src/assets/styles/colors.css */
+:root {
+  /* 1. الخلفيات */
+  --bg-primary: #141414;      /* الخلفية الأساسية (أسود GitHub) */
+  --bg-secondary: #1c1c1c;    /* الخلفية الثانوية */
+	--bg-card: ;
+  --bg-orange-opacity: #c49f6735;         /* خلفية البطاقات */
+	--bg-orange: #f18306;
+	--bg-white-opacity: rgba(255, 255, 255, 0.03); /* اللون الأبيض الشفاف */
+	--bg-white-hover: rgba(255, 255, 255, 0.07); /* اللون الأبيض عند الإشارة */
+
+  /* 2. النصوص */
+  --text-primary: #e6edf3;    /* النص الأساسي (أبيض) */
+  --text-secondary: #8b949e;  /* النص الثانوي (رمادي) */
+
+	/* الظلال و المؤقت */
+  --shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.25); /* ظل أسود خفيف جداً */
+  --shadow-light: 0 4px 12px rgba(255, 255, 255, 0.05); /* ظل أبيض خفيف جداً */
+
+	--trans-02: .2s all;
+	--trans-035: .35s all;
+
+  /* 3. إضافات */
+	--border-white: rgba(255, 255, 255, 0.15);
+  --border: #30363d;          /* الحدود */
+  --primary: #1f6feb;         /* اللون الأساسي (أزرق) */
+  --success: #07c72e;         /* أخضر */
+  --danger: #da3633;          /* أحمر */
+  --warning: #e08319;         /* أصفر */
+}

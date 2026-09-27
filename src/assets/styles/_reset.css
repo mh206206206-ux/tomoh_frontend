@@ -1,0 +1,148 @@
+/* ============================================
+   _reset.css - Comprehensive Reset
+   ============================================ */
+
+/* 1. Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+	user-select: none;
+}
+
+/* 2. HTML & Body */
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+	background-color: #141414;
+	color: white;
+	font-family: alexandria;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 3. Media Elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 4. Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+	transition: var(--trans-02);
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* 5. Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* 6. Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* svg */
+svg {
+	flex-shrink: 0;
+}
+
+/* 7. Root Stacking Context */
+#root, #app {
+  isolation: isolate;
+}
+
+/* 8. Hidden */
+[hidden] {
+  display: none !important;
+}
+
+/* 9. Selection */
+::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* 1. الحجم العام */
+::-webkit-scrollbar {
+  width: 6px;        /* العرض */
+  height: 6px;       /* الارتفاع (للتمرير الأفقي) */
+}
+
+/* 2. المسار (الخلفية) */
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);   /* نفس الخلفية الأساسية */
+  border-radius: 10px;
+}
+
+/* 3. المقبض (الجزء المتحرك) */
+::-webkit-scrollbar-thumb {
+  background: var(--border);       /* حدود رمادية */
+  border-radius: 10px;
+  border: 2px solid var(--bg-primary); /* فاصل بين المقبض والمسار */
+}
+
+/* 4. عند المرور (hover) */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary); /* رمادي أفتح */
+}
+
+/* 5. عند السحب (active) */
+::-webkit-scrollbar-thumb:active {
+  background: var(--primary);      /* أزرق */
+}
+
+/* 6. الزاوية بين التمرير الأفقي والعمودي */
+::-webkit-scrollbar-corner {
+  background: var(--bg-primary);
+}
