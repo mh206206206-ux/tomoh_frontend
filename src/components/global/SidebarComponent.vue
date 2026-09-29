@@ -51,7 +51,6 @@ const router = useRouter();
 
 // INJECT
 const user = inject('user');
-const isClose = inject('isClose');
 
 // DATA
 const name = computed(() => user.value?.name || 'زائر');
@@ -65,6 +64,7 @@ const routes = computed(() => {
 		return route.meta.roles.includes(role.value);
 	});
 });
+import { isClose } from '../../router';
 
 // SCRIPT
 const mediaQueryChange = window.matchMedia('(max-width: 912px)');
@@ -94,8 +94,7 @@ aside.sidebar {
 	display: flex;
 	flex-direction: column;
 	position: fixed;
-	min-height: 98vh;
-	max-height: 98vh;
+	height: 98dvh;
 	width: 300px;
 	top: 50%;
 	right: 0;

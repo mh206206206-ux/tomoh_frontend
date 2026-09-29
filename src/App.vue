@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, provide } from 'vue';
+import { ref, onMounted, watch, provide } from 'vue';
 import { useRoute } from 'vue-router';
 import api from './api/axios';
 import SidebarComponent from './components/global/SidebarComponent';
@@ -24,8 +24,7 @@ const route = useRoute();
 
 // DATA
 const user = ref(null);
-import { isSide } from './router';
-const isClose = ref(false);
+import { isSide, isClose } from './router';
 
 // onMOUNTED
 onMounted(async () => {
@@ -47,7 +46,6 @@ onMounted(async () => {
 
 // PROVIDE
 provide('user', user);
-provide('isClose', isClose);
 </script>
 
 <style lang="scss" scoped>

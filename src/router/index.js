@@ -107,6 +107,7 @@ const router = createRouter({
 });
 // sidebar
 export const isSide = ref(true);
+export const isClose = ref(false);
 
 
 // Before Each
@@ -127,6 +128,12 @@ router.beforeEach((to, from, next) => {
 	const role = localStorage.getItem('role') || '';
 	if (!role) return next('/login');
 	if (!to.meta?.roles?.includes(role)) return next('/');
+
+
+	//  - قفل الشريط بعد الانتقال 
+	if (window.matchMedia('(max-width: 767px)').matches) {
+		isClose.value = true;
+	};
 
 	next();
 });
